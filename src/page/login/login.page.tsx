@@ -9,6 +9,7 @@ import {
 } from './login.styles'
 
 import { BsGoogle } from 'react-icons/bs'
+import { FiLogIn } from 'react-icons/fi'
 
 const LoginPage = () => {
   return (
@@ -28,7 +29,7 @@ const LoginPage = () => {
           <LoginInputContainer>{/* Email Input */}</LoginInputContainer>
           <LoginInputContainer>{/* Password Input */}</LoginInputContainer>
 
-          {/* Button */}
+          <CustomButton startIcon={<FiLogIn size={18} />}>Entrar</CustomButton>
         </LoginContent>
       </LoginContainer>
     </>
