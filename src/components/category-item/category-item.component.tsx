@@ -1,6 +1,7 @@
 import './category-item.styles.css'
 
 import Category from '../../types/categories.types'
+import { CategoryItemContainer, CategoryName } from './category-item.styles'
 
 interface CategoryItemProps {
   category: Category
@@ -8,9 +9,9 @@ interface CategoryItemProps {
 
 const CategoryItem = ({ category }: CategoryItemProps) => {
   return (
-    <div className='category-item-container'>
-      <div className='category-name'></div>
-    </div>
+    <CategoryItemContainer>
+      <CategoryName></CategoryName>
+    </CategoryItemContainer>
   )
 }
 
