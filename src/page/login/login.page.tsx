@@ -15,14 +15,18 @@ import { BsGoogle } from 'react-icons/bs'
 import { FiLogIn } from 'react-icons/fi'
 
 import { useForm } from 'react-hook-form'
-import { isEmail } from 'validator'
+import validator from 'validator'
+interface LoginForm {
+  email: string
+  password: string
+}
 
 const LoginPage = () => {
   const {
     register,
     formState: { errors },
     handleSubmit
-  } = useForm()
+  } = useForm<LoginForm>()
 
   const handleSubmitPress = (data: any) => {
     console.log(data)
@@ -50,7 +54,7 @@ const LoginPage = () => {
               {...register('email', {
                 required: true,
                 validate: (value) => {
-                  return isEmail(value as string)
+                  return validator.isEmail(value)
                 }
               })}
             />
